@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>resident data</title>
+  </head>
+  <body>
+    {% for leader in residentData %}
+    <li>
+      <ol>      
+        <p>{{ leader.first_name }}, {{ leader.last_name}}, {{ leader.nationality }}</p>
+      </ol>
+        {% empty %}
+      <ol>
+        <p> empty </p>
+      </ol>
+    </li>
+    {% endfor %}
+  </body>
+</html>

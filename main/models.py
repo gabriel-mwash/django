@@ -3,23 +3,8 @@ from django.db import models
 # Create your models here.
 
 
-class Book(models.Model):
-    title = models.CharField(max_length=200)
-    author = models.CharField(max_length=100)
-    published_at = models.DateField()
-
-    def __str__(self) -> str:
-        return str(self.title)
-
-
-class MenuItem(models.Model):
-    name = models.CharField(max_length=255)
-    price = models.IntegerField()
-
-
-class Reservation(models.Model):
-    first_name = models.CharField(max_length=255)
-    last_name = models.CharField(max_length=255)
-    guest_count = models.IntegerField()
-    reservation_time = models.DateField(auto_now=True)
-    comments = models.CharField(max_length=1000)
+class Resident(models.Model):
+    first_name = models.CharField(max_length=250)
+    last_name = models.CharField(max_length=250)
+    age = models.IntegerField()
+    nationality = models.CharField(max_length=250)
